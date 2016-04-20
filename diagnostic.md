@@ -6,77 +6,90 @@ Place your responses inside the fenced code-blocks where indicated by comments.
 What is the purpose of a backend?
 
 ```bash
-// your response here
+The backend is used to take requests from the client, such as patch, post, get,
+destroy, and to carry them out through a series of mechanisms.
 ```
 
 Which layer in the MVC pattern is used by the controller to fetch data?
 
 ```bash
-// your response here
+The model fetches data for the controller.
 ```
 
 Which layer in the MVC pattern communicates with the model?
 
 ```bash
-// your response here
+The controller communicates with the model.
 ```
 
 Why don't we use views in our interpretation of the MVC pattern?
 
 ```bash
-// your response here
+Because they are being phased out and we are creating our own views when we create
+our own front ends.
 ```
 
 What does C.R.U.D stand for?
 
 ```bash
-// your response here
+Create Read Update Destroy
 ```
 
 In which part of the MVC pattern can we find C.R.U.D actions?
 
 ```bash
-// your response here
+In the model
 ```
 List at least 5 standard actions that C.R.U.D corresponds to?
 
 ```bash
-// your response here
+Index, Show, Destroy, Update, Create
 ```
 
 A user action fires a `GET` request for `person/1`. Explain in detail each step
 required for data to be returned to the client. (bullet points or ordered list)
 
 ```bash
-// your response here
+- The request goes through a router where it is passed to the correct controller
+  method that can successfully carry out the action.
+- This controller then passes it onto the model
+- The model actually retrieves that data.
+- Either an error or the data is returned to the controller depending on whether
+  or not the data was found.
+- This is then passed back to the client in some form.
 ```
 
 What is the command to generate a new rails-api app?
 
 ```bash
-// your response here
+rails-api new "Enter App name" -T --database=postgresql
 ```
 
 What is the command to start an instance of a rails server?
 
 ```bash
-// your response here
+rails s or rails server
 ```
 
 What are the commands to drop, create and migrate a database? (3 bullet points)
 
 ```bash
-// your response here
+- rake db:drop
+- rake db:create
+- rake db:migrate
 ```
 
 What is the command to scaffold a pet with a name and an age?
 
 ```bash
-// your response here
+rails-api g scaffold pet name:string age:string
 ```
 
 List two advantages of using serializers? (2 bullet points)
 
 ```bash
-// your response here
+- It limits/allows access to only certain information, thus making your data
+  more secure
+- It also allows you to sure of what data is being shared where so that something 
+  unexpected wont happen with your data.
 ```
